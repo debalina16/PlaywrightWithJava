@@ -12,10 +12,10 @@ public class visibleElement {
 		Page page=browser.newPage();
 		page.navigate("https://www.amazon.in/");
 		List <String> allStringText=page.locator("a:visible").allInnerTexts();
-		for(int i=0;i<allStringText.size();i++) {
-			System.out.println(allStringText.get(i));
-		}
-		
+//		for(int i=0;i<allStringText.size();i++) {
+//			System.out.println(allStringText.get(i));
+//		}
+		allStringText.stream().forEach(e->{System.out.println(e);});
 		int allImgCount=page.locator("//img>>visible=true").count();
 		System.out.println(allImgCount);
 			
